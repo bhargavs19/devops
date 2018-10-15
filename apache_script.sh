@@ -1,9 +1,9 @@
 #Functions
 #Install Fun
-instal ()
+instal()
 {
  sudo yum install httpd -y
- echo "Apche is Installed"
+ echo "Apache Service is Installed Successfully"
  start
 
 }
@@ -44,8 +44,7 @@ if [ $check -eq 0 ];then
   echo "If you want to install apache enter 1 else 0"
   read -p "Enter choice" n
      if [ $n -eq 1 ];then 
-#      instal
-sudo yum install httpd -y
+      instal
     else
        exit 0
     fi
