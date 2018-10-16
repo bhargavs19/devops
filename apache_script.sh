@@ -33,8 +33,7 @@ stop()
 }
 
 #Main Program
-cd /var/www
-check=$?
+test -d /var/www/html && check=0||check=1
 if [ $check -eq 0 ];then
   echo "Apache Installed"
    sta_fun
