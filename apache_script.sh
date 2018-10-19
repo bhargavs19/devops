@@ -1,3 +1,4 @@
+#!/bin/bash
 #Functions
 #Install Fun
 instal()
@@ -33,16 +34,18 @@ stop()
 }
 
 #Main Program
-test -d /var/www/html && check=0||check=1
+#cd /var/www
+test -d /var/www/html/ && check=0||check=1
 if [ $check -eq 0 ];then
   echo "Apache Installed"
    sta_fun
  else
   echo "Apache Not Installed"
 
-  echo "If you want to install apache enter 1 else 0"
-  read -p "Enter choice" n
-     if [ $n -eq 1 ];then 
+  echo "If you want to install apache enter y else n"
+  read -p "Enter choice" ch
+     if test "$ch"="y" 
+    then 
       instal
     else
        exit 0
